@@ -5,7 +5,9 @@ const mongoose = require("mongoose")
 const Message = require("./models/messages")
 const app = express()
 const server = http.createServer(app)
+const dns = require("dns");
 
+dns.setDefaultResultOrder("ipv4first"); 
 const io = new Server(server, {
     cors: {
         origin: "*"
