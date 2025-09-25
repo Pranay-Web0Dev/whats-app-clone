@@ -12,7 +12,7 @@ const io = new Server(server, {
     }
 })
 
-mongoose.connect("mongodb+srv://babaganpat72:NHmBXpObkp0pVnA4@cluster0.apti0ez.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0", {
+mongoose.connect("mongodb+srv://babaganpat72:NHmBXpObkp0pVnA4@cluster0.apti0ez.mongodb.net/chat-app?retryWrites=true&w=majority&appName=Cluster0", {
     useNewUrlParser: true,
     useUnifiedTopology: true
 })
