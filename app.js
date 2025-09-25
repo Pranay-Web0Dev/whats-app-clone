@@ -13,7 +13,7 @@ const io = new Server(server, {
 })
 
 mongoose.connect(
-  "mongodb+srv://babaganpat72:NHmBXpObkp0pVnA4@cluster0.apti0ez.mongodb.net/chat-app?retryWrites=true&w=majority&appName=Cluster0"
+  "mongodb+srv://TradeX:cOUYxgkJmgflEkp9@tradexcluster.j5vbglc.mongodb.net/chat-app?retryWrites=true&w=majority"
 )
 .then(() => console.log("Connected to MongoDB Atlas"))
 .catch(err => console.log("MongoDB connection error:", err));
