@@ -1,0 +1,143 @@
+/* Reset */
+body,
+html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: Arial, sans-serif;
+}
+
+/* Login section */
+#authsection {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background: #f0f2f5;
+}
+
+#authsection input {
+    padding: 10px;
+    margin-bottom: 10px;
+    width: 250px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+#authsection button {
+    padding: 10px 20px;
+    background: #25d366;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* Chat Section */
+#chatsection {
+    display: flex;
+    height: 100vh;
+    background-color: #e5ddd5;
+
+}
+
+/* User list */
+.userlist {
+    width: 25%;
+    background: #f0f2f5;
+    border-right: 1px solid #ddd;
+    overflow-y: auto;
+}
+
+.userlist ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.userlist li {
+    padding: 15px;
+    cursor: pointer;
+    border-bottom: 1px solid #ddd;
+}
+
+.userlist li:hover {
+    background: #e5ddd5;
+}
+
+/* Chatbox */
+.chatbox {
+    width: 75%;
+    display: flex;
+    flex-direction: column;
+}
+
+.chatbox h2 {
+    margin: 0;
+    background-color: #075e54;
+    color: white;
+    padding: 15px;
+    font-size: 18px;
+    border-bottom: 1px solid #ddd;
+}
+
+/* Messages */
+.messages {
+    flex: 1;
+    padding: 5px;
+    overflow-y: auto;
+    background-color: #e5ddd5;
+    display: flex;
+    flex-direction: column;
+}
+
+.message {
+    padding: 8px 12px;
+    margin: 5px;
+    border-radius: 8px;
+    max-width: 60%;
+    word-wrap: break-word;
+}
+
+.my-message {
+    align-self: flex-end;
+    background: #dcf8c6;
+}
+
+.other-message {
+    align-self: flex-start;
+    background: #fff;
+}
+
+/* Input area */
+.input-area {
+    display: flex;
+    padding: 10px;
+    border-top: 1px solid #ddd;
+  background-color: #e5ddd5;
+}
+
+#message {
+    flex: 1;
+    padding: 10px;
+    border-radius: 20px;
+    border: 1px solid #ccc;
+    outline: none;
+}
+
+#sendbtn {
+    margin-left: 10px;
+    padding: 10px 15px;
+    background-color: #25d366;
+    color: white;
+    border: none;
+    border-radius: 20%;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+#sendbtn:hover {
+    background-color: #1ebe5d;
+}
