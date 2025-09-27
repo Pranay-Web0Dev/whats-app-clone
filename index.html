@@ -46,10 +46,11 @@
     const messagesDiv = document.querySelector(".messages")
 
     let selectedUser = null
-
+    let myUser = null
     loginBtn.addEventListener("click", () => {
       let username = usernameInput.value
       if (!username) return alert("please enter username")
+      myUser = username
       socket.emit("login", username)
       usernameInput.value = ""
       authSection.style.display = "none"
@@ -64,10 +65,10 @@
       scrollToBottom()
     })
 
-    socket.on("users", (users, curruser) => {
+    socket.on("users", (users) => {
       usersList.innerHTML = ""
       Object.entries(users).forEach(([username, id]) => {
-        if(curruser === username) return
+        if(myUser === username) return
         const li = document.createElement("li")
         li.innerText = username
         li.onclick = () => {
