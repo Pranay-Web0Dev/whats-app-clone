@@ -64,9 +64,10 @@
       scrollToBottom()
     })
 
-    socket.on("users", (users, currUser) => {
+    socket.on("users", (users, curruser) => {
       usersList.innerHTML = ""
       Object.entries(users).forEach(([username, id]) => {
+        if(curruser === username) return
         const li = document.createElement("li")
         li.innerText = username
         li.onclick = () => {

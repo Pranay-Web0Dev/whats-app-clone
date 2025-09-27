@@ -29,7 +29,7 @@ io.on("connection", (socket) => {
         socket.data.username = username || "Anonymous"
         users[socket.data.username] = socket.id
 
-        io.emit("users", users, username)
+        socket.emit("users", users, socket.data.username)
         socket.emit("messageFromServer", `welcome ${username}`)
         socket.broadcast.emit("messageFromServer", `new user joined: ${username}`)
     })
